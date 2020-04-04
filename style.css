@@ -1,0 +1,375 @@
+/* Declare variables */
+:root {
+    --copper: hsla(2, 65%, 44%, 1);
+    --blue: hsla(212, 80%, 42%, 1); 
+    --copper-hex: #b92c27;
+    --blue-hex: #1565c1;
+    --color-1: hsla(2, 65%, 44%, 1);
+    --color-2: hsla(212, 80%, 42%, 1);
+}
+
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Main page settings (html, body, etc) */
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+body {
+    font: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    top: 15%;
+    background: linear-gradient(to right, var(--color-1), var(--color-2));
+    /* background: linear-gradient(to right, var(--copper-hex), var(--blue-hex)); */
+}
+
+/* Grid layout */
+
+.main-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#gradient-settings-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    grid-column: 1;
+}
+
+#gradient-output-container {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+    grid-column: 2;
+
+    padding: 1rem;
+}
+
+/* General elements */
+h1 {
+    font: 600 5rem 'Raleway', sans-serif;
+    color: white;
+    /*color: rgba(0, 0, 0, 0.5);*/
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    width: 100%;
+}
+
+p, label {
+    font-size: 1.6rem;
+    letter-spacing: normal;
+    font-weight: 600;
+}
+
+div {
+    margin: 2rem;
+}
+
+input[type="number"]:hover, input[type="text"]:hover {
+    opacity: 0.6;
+}
+
+input[type="button"]:hover, input[type="color"]:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+
+/* Codebox */
+code {
+    display: block;
+    width: 90%;
+    margin: 1rem;
+    padding: 1rem;
+
+    border: 3px solid; 
+    border-image: linear-gradient(to left, var(--copper), var(--blue)) 1 / 1 / 0 stretch;
+
+    background-color: hsla(192, 15%, 12%, 0.8);
+
+    font: 700 1.6rem Monospace, sans-serif;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+code span {
+    background: linear-gradient(to right, var(--copper), var(--blue));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Direction buttons */
+
+.direction-button-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        ". top ."
+        "left cycle right"
+        ". bottom ."
+    ;
+    margin-bottom: 1%;
+    flex-wrap: wrap;
+}
+
+.direction-button {
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 1rem;
+    width: 11rem;
+
+    border-width: 0px 2px 0px 2px;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 15px;
+
+    font-size: 1.6rem;
+
+    transition: border 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+}
+
+#button-top {
+    grid-area: top;
+    background: linear-gradient(to top, hsla(180, 1%, 21%, 0.5), transparent);
+}
+
+#button-right {
+    grid-area: right;
+    background: linear-gradient(to right, hsla(180, 1%, 21%, 0.5), transparent);
+    background-size: 102%;
+    background-position-x: -2px;
+}
+
+#button-bottom {
+    grid-area: bottom;
+    background: linear-gradient(to bottom, hsla(180, 1%, 21%, 0.5), transparent);
+}
+
+#button-left {
+    grid-area: left;
+    background: linear-gradient(to left, hsla(180, 1%, 21%, 0.5), transparent);
+    background-size: 102%;
+}
+
+.direction-button:hover {
+    border-width: 0px 2px 0px 2px;
+    border-color: black;
+    border-radius: 2rem;
+}
+
+.direction-button:focus {
+    border-width: 0px 2px 0px 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 30%;
+    font-weight: 600;
+}
+
+/* Settings container */
+#gradient-settings-container {
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin: 1rem;
+}
+
+/* Degree selector */
+
+#degree-container {
+    align-self: center;
+    padding: 1rem;
+    border: 1px dashed black;
+
+}
+
+#direction-degrees {
+    background-color: hsla(0, 0%, 0%, 0.1);
+    border: 0;
+    height: 3rem;
+    width: 5rem;
+    border-radius: 1rem 0 1rem 0;
+
+
+    text-align: center;
+    font-size: 2rem;
+    
+    transition: opacity 0.3s ease-in-out;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+         appearance: textfield;
+
+}
+
+#degree-label {
+    margin-left: -10%;
+    margin-top: -20%;;
+    font-size: 3.5rem;
+}
+
+/* Color selectors */
+
+#color-input-container {
+    display: flex;
+    margin: 0;
+}
+
+#color-input-container input {
+    margin: 0.7rem;
+}
+.color-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#color-input-container label {
+    font-size: 1.8rem;
+}
+
+.color-inputs-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+#color-input-container input[type="text"] {
+    width: 19rem;
+    padding: 0.5rem;
+    background-color: hsla(0, 0%, 0%, 0.1);
+
+    border: 0;
+    border-radius: 1rem 0 1rem 0;
+
+    text-align: center;
+    font-size: 1.7rem;
+    
+    transition: opacity 0.3s ease-in-out;
+}
+
+#color-code-button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.color-code-button {
+    padding: 1rem;
+    width: 20%;
+    background-color: hsla(0, 0%, 0%, 0.1);
+    
+    border: none;
+    border-radius: 1rem;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.color-code-button:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+/* Breakpoints */
+@media only screen and (max-width: 900px) {
+    html { 
+        font-size: 9.5px;
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 9px;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    html { 
+        font-size: 8px;   
+    }
+    .main-grid-container {
+        grid-template-rows: repeat(2, auto);
+    }
+    #gradient-settings-container {
+        grid-column: span 3;
+        grid-row: 1;
+        align-items: center;
+    }
+    .direction-button-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .direction-button {
+        width: 12rem;
+        height: 5rem;
+        font-size: 1.9rem;
+    }
+    #gradient-output-container {
+        grid-column: span 3;
+        grid-row: 2;
+    }
+    .gradient-css {
+        font-size: 1.7rem;
+    }
+}
+}

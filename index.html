@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body id="body-gradient">
+    <h1>Gradient Generator</h1>
+
+    <main class="main-grid-container">
+        <section id="gradient-settings-container">
+            <div class="direction-button-container">
+                <button class="direction-button" type="button" id="button-top">to top</button>
+                <button class="direction-button" type="button" id="button-right">to right</button>
+                <button class="direction-button" type="button" id="button-bottom">to bottom</button>
+                <button class="direction-button" type="button" id="button-left">to left</button>
+                <!-- <button class="cycle-direction-button" type="button" id="button-cycle">NEXT</button> -->
+            </div>
+
+            <div id="degree-container">
+                <input id="direction-degrees" name="direction-degrees" type="number" max="360" min="-360"></input>
+                <label for="direction-degrees" id="degree-label">&#176</label>
+            </div>
+            <div class="color-settings-container">
+                <div id="color-input-container">
+                    <div class="color-inputs">
+                        <div class="color-inputs-row">
+                            <label for="color-1-input">Color 1</label>
+                            <input type="color" id="color-1" name="color-1-input" value="#b92c27">
+                        </div>  
+                        <input type="text" id="color-1-text" name="color-1-text" value="hsla(2, 65%, 44%, 1)">
+                    </div>
+                    <div class="color-inputs">
+                        <div class="color-inputs-row">
+                            <label for="color-2-input">Color 2</label>
+                            <input type="color" id="color-2" name="color-2-input" value="#1565c1">
+                        </div>
+                        <input type="text" id="color-2-text" name="color-2-text" value="hsla(212, 80%, 42%, 1)">   
+                    </div>
+                </div>
+                <div class="button-container" id="color-code-button-container">
+                    <button class="color-code-button" id="hex-switch-button">Hex</button>
+                    <button class="color-code-button" id="RGBA-switch-button">RGBA</button>
+                    <button class="color-code-button" id="HSLA-switch-button">HSLA</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gradient-output-container">
+            
+            <code class="gradient-css" id="hsla-value"><span></span></code>
+            <code class="gradient-css" id="rgba-value"><span></span></code>
+            <code class="gradient-css" id="hex-value"><span></span></code>
+        
+        </section>
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+    <!-- One of the following themes -->
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "test_package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified.\""
+  },
+  "author": "Andrew",
+  "license": "MIT",
+  "repository": {
+  "type": "git",
+  "url": "git+"
+},
+
+"author": "",
+"license": "ISC",
+"bugs": {
+  "url": "https://github.com/"
+},
+
+"homepage": "https://github.com"
+
+}
