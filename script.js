@@ -1,3 +1,8 @@
+//import { without } from "lodash";
+var _ = require('lodash');
+
+var array = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log('answer:', _.without(array, 3));
 
 /* Declare variables for the two main linear-gradient colors, targeting input fields */
 let color1 = document.querySelector("#color-1");

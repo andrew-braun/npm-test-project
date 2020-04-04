@@ -4,7 +4,7 @@
   "description": "a test project using a background generator and npm",
   "main": "script.js",
   "scripts": {
-    "test": "\"echo \\\"This is a test!\\\"\""
+    "build": "browserify script.js > bundle.js && live-server"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/andrew-braun/npm-test-project/issues"
   },
-  "homepage": "https://github.com/andrew-braun/npm-test-project#readme"
+  "homepage": "https://github.com/andrew-braun/npm-test-project#readme",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  }
 }
