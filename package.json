@@ -1,24 +1,24 @@
 {
-  "name": "test_package",
+  "name": "npm-test-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "a test project using a background generator and npm",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified.\""
+    "test": "\"echo \\\"This is a test!\\\"\""
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrew-braun/npm-test-project.git"
+  },
+  "keywords": [
+    "learning",
+    "npm",
+    "js"
+  ],
   "author": "Andrew",
   "license": "MIT",
-  "repository": {
-  "type": "git",
-  "url": "git+"
-},
-
-"author": "",
-"license": "ISC",
-"bugs": {
-  "url": "https://github.com/"
-},
-
-"homepage": "https://github.com"
-
+  "bugs": {
+    "url": "https://github.com/andrew-braun/npm-test-project/issues"
+  },
+  "homepage": "https://github.com/andrew-braun/npm-test-project#readme"
 }
