@@ -22,6 +22,6 @@
   },
   "homepage": "https://github.com/andrew-braun/npm-test-project#readme",
   "dependencies": {
-    "lodash": "^4.17.19"
+    "lodash": "^4.17.21"
   }
 }
